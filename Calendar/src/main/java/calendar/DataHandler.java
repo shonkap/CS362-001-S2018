@@ -488,7 +488,7 @@ public class DataHandler {
         apptElement.appendChild(recurNumberElement);
         
         //Let the appointment know where it is stored in the XML tree
-        ((Appt) appt).setXmlElement(apptElement);
+        //((Appt) appt).setXmlElement(apptElement);
         
         //Handle the auto saving option
         if (isAutoSave()) {
