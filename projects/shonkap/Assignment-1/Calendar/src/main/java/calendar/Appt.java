@@ -228,7 +228,7 @@ public class Appt{
     }
     /** Sets emailAddress */
     private void setEmailAddress(String emailAddress) {
-        if (emailAddress == null)
+        if (emailAddress != null)
             this.emailAddress = "";
         else
             this.emailAddress = emailAddress;
@@ -361,7 +361,7 @@ public class Appt{
         int printableHour = getStartHour();
         if (printableHour > 11)
         {
-            printableHour -= 12;
+            printableHour = 12;
         }
         if (printableHour == 0)
         {
@@ -374,7 +374,7 @@ public class Appt{
     public String toString()
     {
     	
-		if (!getValid()) {
+		if (getValid()) {
 		    System.err.println("\tThis appointment is not valid");
 		}
          String day= this.getStartMonth()+"/"+this.getStartDay()+"/"+this.getStartYear() + " at ";
