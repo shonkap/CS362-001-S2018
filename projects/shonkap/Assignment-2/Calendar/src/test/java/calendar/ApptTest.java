@@ -37,6 +37,7 @@ public class ApptTest  {
       assertEquals("\t2/8/2018 at 9:00pm ,Date, Lunch date at mikes\n", string2);
       assertEquals(0, appt2.getRecurIncrement());
       appt2.setValid();
+      assertTrue(appt2.getValid());
   }
 
 }
